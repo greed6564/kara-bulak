@@ -1,0 +1,35 @@
+export const first = `
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1098_2139)">
+<path d="M40 4H16C13.8 4 12 5.8 12 8V32C12 34.2 13.8 36 16 36H40C42.2 36 44 34.2 44 32V8C44 5.8 42.2 4 40 4ZM23 19C23 20.66 21.66 22 20 22H18V26H15V14H20C21.66 14 23 15.34 23 17V19ZM33 23C33 24.66 31.66 26 30 26H25V14H30C31.66 14 33 15.34 33 17V23ZM41 17H38V19H41V22H38V26H35V14H41V17ZM18 19H20V17H18V19ZM8 12H4V40C4 42.2 5.8 44 8 44H36V40H8V12ZM28 23H30V17H28V23Z" fill="#0066A1"/>
+</g>
+<defs>
+<clipPath id="clip0_1098_2139">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+`;
+export const second = `
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1098_2269)">
+<path d="M46 4H2C1.46957 4 0.960859 4.21071 0.585786 4.58579C0.210714 4.96086 0 5.46957 0 6L0 42C0 42.5304 0.210714 43.0391 0.585786 43.4142C0.960859 43.7893 1.46957 44 2 44H46C46.5304 44 47.0391 43.7893 47.4142 43.4142C47.7893 43.0391 48 42.5304 48 42V6C48 5.46957 47.7893 4.96086 47.4142 4.58579C47.0391 4.21071 46.5304 4 46 4ZM28 12C29.1867 12 30.3467 12.3519 31.3334 13.0112C32.3201 13.6705 33.0892 14.6075 33.5433 15.7039C33.9974 16.8003 34.1162 18.0067 33.8847 19.1705C33.6532 20.3344 33.0818 21.4035 32.2426 22.2426C31.4035 23.0818 30.3344 23.6532 29.1705 23.8847C28.0067 24.1162 26.8003 23.9974 25.7039 23.5433C24.6075 23.0892 23.6705 22.3201 23.0112 21.3334C22.3519 20.3467 22 19.1867 22 18C22.0019 16.4093 22.6346 14.8842 23.7594 13.7594C24.8842 12.6346 26.4093 12.0019 28 12ZM44 40H4V22L12 12L28 34L38 26L44 32V40Z" fill="#0066A1"/>
+</g>
+<defs>
+<clipPath id="clip0_1098_2269">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+`;
+
+
+export function createSvgImg(item) {
+    const newImage = document.createElement('img');
+    newImage.className = 'pdf_icon';
+    const base64 = btoa(item);
+    newImage.src = 'data:image/svg+xml;base64,' + base64;
+    
+    return newImage;
+}
